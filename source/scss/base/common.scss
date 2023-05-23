@@ -82,3 +82,23 @@
     }
   }
 }
+
+
+.button {
+  background: $mainLightColor;
+  border: 2px solid $mainDarkColor;
+  font-weight: 700;
+  font-size: rem(17);
+  line-height: math.div(20, 17);
+  text-transform: uppercase;
+  color: $mainDarkColor;
+  padding: rem(16) 0;
+  transition: .4s all ease 0s;
+
+  @media(any-hover: hover){
+      &:hover{
+          background: $mainDarkColor;
+        color: $mainLightColor;
+      }
+  }
+}

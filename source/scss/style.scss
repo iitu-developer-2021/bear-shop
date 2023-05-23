@@ -14,11 +14,12 @@ $mainLightColor: #FFFFFF;
 $mainBackgroundColor: #F9F9F9;
 $mainGreen: #63D1BB;
 $mainBlackGreen: #56C3B2;
+$mainGrayBorderBottom: #ECECEC;
 
 $minWidth: 320;
 $maxWidth: 1920;
 $maxWidthContainer: 1550;
-$containerPadding: 50;
+$containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 $pc: em($containerWidth);
@@ -31,3 +32,4 @@ $mobileSmall: em(479.98);
 @import "modules/header";
 @import "modules/footer";
 @import "modules/banner";
+@import "modules/bestGood";

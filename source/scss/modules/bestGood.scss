@@ -1,0 +1,212 @@
+.best-good {
+  @include adaptiveValue("margin-top", 54, 31, 0, 1990);
+  @include adaptiveValue("padding-bottom", 31, 40, 0, 1990);
+
+
+  // .best-good__container
+  &__container {
+
+  }
+
+  // .best-good__body
+  &__body{
+    position: relative;
+    padding-top: rem(57);
+    @include adaptiveValue("padding-left", 173, 80, 0, 1150, 900);
+
+    @media (max-width: $tablet) {
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
+
+  // .best-good__top
+  &__top {
+
+    @media (max-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: rem(15);
+    }
+  }
+
+  // .best-good__title
+  &__title {
+    font-weight: 700;
+    line-height: math.div(57, 53);
+    color: $mainColor;
+    position: relative;
+    z-index: 2;
+    @include adaptiveValue("font-size", 53, 25, 0, 1300, 320);
+  }
+
+  // .best-good__mark
+  &__mark {
+    font-weight: 700;
+    font-size: rem(17);
+    line-height: math.div(17, 17);
+    text-transform: uppercase;
+    color: $mainGreen;
+    position: absolute;
+    left: 0;
+    top: rem(70);
+
+    @media (max-width: $tablet) {
+      position: static;
+    }
+  }
+
+  // .best-good__card
+  &__card {
+
+    @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr auto;
+      align-items: flex-start;
+      column-gap: rem(40);
+      margin-top: rem(50);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      row-gap: rem(25);
+    }
+  }
+
+  // .best-good__description
+  &__description {
+  }
+
+  // .best-good__image
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: $tablet) {
+      position: static;
+      grid-row: 1 / -1;
+      grid-column: 2 / -1;
+
+      img{
+        min-width: rem(360);
+        max-width: 100%;
+        height: percent(404, 768);
+      }
+    }
+
+    @media (max-width: $mobile) {
+      grid-row: initial;
+      grid-column: initial;
+
+      img{
+        min-width: initial;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  // .best-good__order
+  &__order {
+  }
+}
+
+
+.good-description {
+  position: relative;
+  z-index: 2;
+  max-width: rem(292);
+  margin-bottom: rem(110);
+  @include adaptiveValue("margin-bottom", 110, 60, 0, 1990, 768);
+
+  @media (max-width: $tablet) {
+    margin-bottom: rem(30);
+  }
+
+  @media (max-width:$mobile) {
+    max-width: initial;
+  }
+
+  // .good-description__text
+  &__text {
+    font-weight: 400;
+    font-size: rem(17);
+    line-height: math.div(30, 17);
+    color: $mainDarkColor;
+    margin-top: rem(35);
+    margin-bottom: rem(60);
+    @include adaptiveValue("padding-right", 80, 30, 1, 1990, 768);
+
+    @media (max-width: $tablet) {
+      margin-top: 0;
+      margin-bottom: rem(30);
+    }
+
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+
+  // .good-description__details
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .good-description__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+    padding: rem(9) 0;
+    border-bottom: 1px solid $mainGrayBorderBottom;
+  }
+
+  // .good-description__label
+  &__label {
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: math.div(20, 15);
+    color: $mainDarkColor;
+  }
+
+
+  // .good-description__value
+  &__value {
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: math.div(20, 15);
+    color: $mainDarkColor;
+  }
+}
+
+.good-order {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(292);
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: $mobile) {
+    max-width: initial;
+  }
+
+  // .good-order__price
+  &__price {
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    color: $mainDarkColor;
+    text-align: center;
+    margin-bottom: rem(30);
+  }
+
+  // .good-order__button
+  &__button {
+  }
+}

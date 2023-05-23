@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .banner {
   background: $mainBackgroundColor;
   min-height: rem(730);
