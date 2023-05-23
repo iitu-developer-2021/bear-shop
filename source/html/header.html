@@ -1,3 +1,53 @@
-<header>
-  I am header
+<header class="header">
+  <div class="header__container container">
+    <nav class="header__nav header-nav">
+      <ul class="header-nav__list">
+        <li class="header-nav__item">
+          <a href="#" class="header-nav__link">Каталог товаров</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#" class="header-nav__link">Вязание на заказ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="#" class="header__logo">
+      <picture class="header__picture">
+        <source media="(max-width: 479.98px)" srcset="@img/logo/logo-mobile.svg" />
+        <source media="(max-width: 767.98px)" srcset="@img/logo/logo-tablet.svg" />
+        <img src="@img/logo/logo-desktop.svg" alt="Логотип" class="header__logo-img"/>
+      </picture>
+    </a>
+
+    <div class="header__actions header-actions">
+      <div class="header-actions__search">
+         <a href="#">
+           <svg>
+             <use href="@img/icons.svg#search"></use>
+           </svg>
+         </a>
+
+         <p class="header-actions__text header-actions__text--search">
+           Поиск по сайту
+         </p>
+      </div>
+
+      <div class="header-actions__cart">
+          <a href="#" class="header-actions__cart-link">
+            <svg>
+              <use href="@img/icons.svg#cart"></use>
+            </svg>
+          </a>
+
+          <p class="header-actions__text">
+            Корзина:
+            <span>пока пуста</span>
+          </p>
+      </div>
+    </div>
+  </div>
+
+  <button class="header__toggle" id="menu-button">
+    <span class="visually-hidden">Открыть/Закрыть меню</span>
+  </button>
 </header>

@@ -6,12 +6,50 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.min.css">
-    <title>Title</title>
+    <title>Мишка</title>
 </head>
 <body>
     @@include('./html/header.html')
     <main>
-
+      <section class="banner">
+        <div class="banner__container container">
+          <h1 class="visually-hidden">Интернет магазин Мишка</h1>
+          <div class="banner__top top-nav">
+            <nav class="top-nav__self">
+              <ul class="top-nav__list">
+                <li class="top-nav__item top-nav__item--desktop">
+                  <a href="#" class="top-nav__link">Новые поступления</a>
+                </li>
+                <li class="top-nav__item top-nav__item--desktop">
+                  <a href="#" class="top-nav__link">Распродажа</a>
+                </li>
+                <li class="top-nav__item top-nav__item--tablet">
+                  <a href="#" class="top-nav__link">Каталог товаров</a>
+                </li>
+                <li class="top-nav__item top-nav__item--tablet">
+                  <a href="#" class="top-nav__link">Вязание на заказ</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="#" class="top-nav__delivery">Бесплатная доставка по России</a>
+          </div>
+          <p class="banner__text">Милые штуки ручной работы для дома</p>
+          <div class="banner__categories categories-banner">
+            <div class="categories-banner__card">
+              <span class="categories-banner__text">Предметы <br /> интерьера</span>
+              <svg class="categories-banner__icon">
+                <use href="@img/icons.svg#interior"></use>
+              </svg>
+            </div>
+            <div class="categories-banner__card categories-banner__card--second">
+              <span class="categories-banner__text">Детские <br /> игрушки</span>
+              <svg class="categories-banner__icon">
+                <use href="@img/icons.svg#toy"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('./html/footer.html')
     <script src="js/app.min.js"></script>

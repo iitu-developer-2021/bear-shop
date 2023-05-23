@@ -19,3 +19,35 @@ export function isWebp() {
         window.document.documentElement.classList.add(className);
     });
 }
+
+export function toggleMenu() {
+    const menuButton =  document.querySelector('#menu-button');
+    const header = document.querySelector('.header')
+
+    function toggleMenu(){
+      if(header.classList.contains('header--active')){
+        header.classList.remove('header--active')
+      }else{
+        header.classList.add('header--active')
+      }
+    }
+
+    menuButton.addEventListener('click', toggleMenu);
+
+    function closeMenu(){
+      if(header.classList.contains('header--active')){
+        header.classList.remove('header--active')
+      }
+    }
+
+    const mobileWidthMediaQuery = window.matchMedia('(min-width: 768px)')
+
+    function handleMediaQuery(event){
+      if(event.matches){
+        closeMenu()
+      }
+    }
+
+    mobileWidthMediaQuery.addEventListener('change', handleMediaQuery)
+    handleMediaQuery(mobileWidthMediaQuery)
+}

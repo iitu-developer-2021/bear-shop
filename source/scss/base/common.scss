@@ -1,0 +1,84 @@
+@use 'sass:math';
+
+.container{
+  max-width: rem($maxWidthContainer);
+  padding:0 rem($containerPadding);
+  margin: 0 auto;
+}
+
+.visually-hidden{
+  display: none;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(15);
+  padding: rem(19) 0;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
+  // .top-nav__self
+  &__self {
+  }
+
+  // .top-nav__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(45);
+  }
+
+  // .top-nav__item
+  &__item {
+    transition: .3s all ease 0s;
+
+    @media(any-hover: hover){
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+  }
+
+  // .top-nav__item--desktop
+  &__item--desktop {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
+
+  // .top-nav__link
+  &__link {
+    font-weight: 700;
+    font-size: rem(15);
+    line-height: math.div(24, 15);
+    color: #000000;
+  }
+
+  // .top-nav__item--tablet
+  &__item--tablet {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  // .top-nav__delivery
+  &__delivery {
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: math.div(24, 15);
+    color: $mainDarkColor;
+    transition: .3s all ease 0s;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
