@@ -330,14 +330,14 @@
     }
   }
 
-  // .header-actions__count
+  // .header-actions__text
   &__text {
     font-weight: 700;
     font-size: rem(17);
     line-height: math.div(24, 17);
     color: $mainColor;
     text-align: center;
-    @include adaptiveValue('margin-left', 30, 15, 1);
+    @include adaptiveValue('margin-left', 30, 15, 0);
 
     &--search{
       margin-left: 0;

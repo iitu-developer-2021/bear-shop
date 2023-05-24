@@ -1,12 +1,10 @@
 .best-good {
   @include adaptiveValue("margin-top", 54, 31, 0, 1990);
-  @include adaptiveValue("padding-bottom", 31, 40, 0, 1990);
-
+  padding-bottom: rem(73);
+  background: url("../img/card/zigzag-black.png") bottom repeat-x;
 
   // .best-good__container
-  &__container {
-
-  }
+  &__container {}
 
   // .best-good__body
   &__body{
@@ -85,29 +83,27 @@
     position: absolute;
     top: 0;
     right: 0;
+    height: 100%;
+
+    img{
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
     @media (max-width: $tablet) {
       position: static;
       grid-row: 1 / -1;
       grid-column: 2 / -1;
-
-      img{
-        min-width: rem(360);
-        max-width: 100%;
-        height: percent(404, 768);
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @media (max-width: $mobile) {
       grid-row: initial;
       grid-column: initial;
-
-      img{
-        min-width: initial;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
     }
   }
 
@@ -115,7 +111,6 @@
   &__order {
   }
 }
-
 
 .good-description {
   position: relative;
@@ -140,7 +135,7 @@
     color: $mainDarkColor;
     margin-top: rem(35);
     margin-bottom: rem(60);
-    @include adaptiveValue("padding-right", 80, 30, 1, 1990, 768);
+    @include adaptiveValue("padding-right", 80, 70, 1, 1990, 768);
 
     @media (max-width: $tablet) {
       margin-top: 0;
