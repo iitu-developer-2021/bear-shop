@@ -8,6 +8,14 @@
   &__container {
   }
 
+  &__body{
+    @include adaptiveValue("padding-left", 173, 80, 0, 1150, 900);
+
+    @media (max-width: $tablet) {
+      padding-left: 0;
+    }
+  }
+
   // .about__info
   &__info {
     font-weight: 700;

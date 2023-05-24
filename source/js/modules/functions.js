@@ -1,3 +1,5 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
+
 export function isWebp() {
     function testWebP(callback) {
         // eslint-disable-next-line
@@ -50,4 +52,19 @@ export function toggleMenu() {
 
     mobileWidthMediaQuery.addEventListener('change', handleMediaQuery)
     handleMediaQuery(mobileWidthMediaQuery)
+}
+
+export const initSwiper = () => {
+  const swiper = new Swiper('.review-slider', {
+    modules: [Navigation, Pagination],
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.review-slider__arrow-right',
+      prevEl: '.review-slider__arrow-left'
+    }
+  });
 }

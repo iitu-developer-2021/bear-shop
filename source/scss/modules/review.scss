@@ -1,0 +1,205 @@
+.review {
+  @include adaptiveValue("margin-top", 40, 20, 0);
+  @include adaptiveValue("padding-bottom", 68, 20, 0);
+  background: url("../img/card/zigzag-black.png") left bottom repeat-x;
+
+  // .review__container
+  &__container {
+    background: url("../img/review/review-desktop.jpg") left top no-repeat;
+    min-height: rem(457);
+    @include adaptiveValue("padding-top", 78, 20, 0);
+    @include adaptiveValue("padding-bottom", 96, 20, 0);
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/review/review-desktop2x.jpg") left top no-repeat;
+      background-size: rem(350) rem(457);
+    }
+
+    @media (max-width: $mobile) {
+      background: initial;
+      min-height: initial;
+    }
+  }
+
+  // .review__body
+  &__body{
+    @include adaptiveValue("padding-left", 173, 80, 0, 1150, 900);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(auto, 1fr);
+    gap: rem(35);
+
+    @media (max-width: $tablet) {
+      padding-top: 0;
+      padding-left: 0;
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: initial;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  // .review__title
+  &__title {
+    font-weight: 700;
+    font-size: rem(53);
+    line-height: math.div(57, 53);
+    color: $mainColor;
+
+    @media (max-width: $tablet) {
+      font-size: rem(43);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(25);
+    }
+  }
+
+  // .review__button
+  &__button {
+    padding-left: rem(26);
+    padding-right: rem(26);
+
+    @media (max-width: $mobile) {
+      grid-row: 3 / -1;
+    }
+  }
+
+  // .review__slider
+  &__slider {
+    grid-column: 1 / -1;
+  }
+}
+
+.review-slider {
+  overflow: hidden;
+  position: relative;
+  // .review-slider__body
+  &__body {
+
+  }
+
+  // .review-slider__slide
+  &__slide {
+    padding-right: rem(130);
+
+    @media (max-width: $mobile) {
+      padding-right: 0;
+    }
+  }
+
+  // .review-slider__text
+  &__text {
+    font-weight: 400;
+    font-size: rem(17);
+    line-height: math.div(30, 17);
+    color: $mainDarkColor;
+    margin-bottom: rem(44);
+    @include adaptiveValue("margin-bottom", 44, 15);
+    max-width: rem(590);
+
+    @media (max-width: $mobile) {
+      font-size: rem(15);
+      max-width: initial;
+    }
+  }
+
+  // .review-slider__detail
+  &__detail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: $mobile) {
+     display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // .review-slider__author
+  &__author {
+    font-weight: 700;
+    font-size: rem(17);
+    line-height: math.div(24, 17);
+    color: $mainColor;
+  }
+
+  // .review-slider__author-email
+  &__author-email {
+    font-weight: 400;
+    font-size: rem(17);
+    line-height: math.div(24, 17);
+    color: $mainColor;
+    display: block;
+  }
+
+  // .review-slider__buttons
+  &__buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    @media (max-width: $mobile) {
+      position: static;
+      margin-top: rem(30);
+    }
+  }
+
+  // .review-slider__arrow-right
+  // .review-slider__arrow-left
+  &__arrow-right,
+  &__arrow-left {
+    width: rem(65);
+    height: rem(40);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease 0s;
+    background: $mainLightColor;
+
+    @media(any-hover: hover){
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+
+    @media (max-width: $mobile) {
+      flex: 1;
+      border: 1px solid $mainGrayBorderBottom;
+      transition: .3s all ease 0s;
+      padding: rem(10) 0;
+
+      @media(any-hover: hover){
+        &:hover{
+          transform: initial;
+          border: 1px solid lighten($mainColor, .8);
+        }
+      }
+    }
+
+    &::after{
+      content: "";
+      width: rem(50);
+      height: rem(26);
+      background: url("../img/icons.svg#arrow-right") left center no-repeat;
+      background-size: cover;
+    }
+  }
+
+  // .review-slider__arrow-left
+  &__arrow-left {
+    right: rem(65);
+
+    &::after{
+      background: url("../img/icons.svg#arrow-left") left center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
