@@ -75,6 +75,8 @@
 .review-slider {
   overflow: hidden;
   position: relative;
+  min-width: 0;
+
   // .review-slider__body
   &__body {
 

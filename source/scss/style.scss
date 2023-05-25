@@ -13,8 +13,10 @@ $mainDarkColor: #444444;
 $mainLightColor: #FFFFFF;
 $mainBackgroundColor: #F9F9F9;
 $mainGreen: #63D1BB;
+$mainDarkenGreen: #62D1BA;
 $mainBlackGreen: #56C3B2;
 $mainGrayBorderBottom: #ECECEC;
+$mainGrayBackgroundColor: #F1F1F1;
 
 $minWidth: 320;
 $maxWidth: 1920;
@@ -36,3 +38,4 @@ $mobileSmall: em(479.98);
 @import "modules/bestGood";
 @import "modules/about";
 @import "modules/review";
+@import "modules/contacts";

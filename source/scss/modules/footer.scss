@@ -1,0 +1,98 @@
+.footer {
+  background: $mainGrayBackgroundColor;
+  padding: rem(50) 0;
+
+  @media (max-width: $mobile) {
+    padding: rem(25) 0;
+  }
+
+  // .footer__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(15);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: initial;
+    }
+  }
+
+  // .footer__logo
+  &__logo {
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: rem(50);
+
+    @media (max-width: $tablet) {
+      gap: rem(40);
+    }
+
+    @media (max-width: $mobile) {
+      padding-bottom: rem(22);
+    }
+  }
+
+  // .footer__social
+  &__social {
+
+    svg{
+      width: rem(29);
+      height: rem(29);
+    }
+  }
+
+  // .footer__copy
+  &__copy {
+    display: flex;
+    align-items: center;
+    gap: rem(28);
+
+    span{
+      font-weight: 700;
+      font-size: rem(19);
+      line-height: math.div(18, 19);
+      color: $mainColor;
+    }
+
+    @media (max-width: $mobile) {
+      align-self: flex-start;
+      justify-content: center;
+      width: 100%;
+      padding-top: rem(22);
+      position: relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: rem(1);
+        background: #E5E5E5;
+      }
+    }
+  }
+
+  // .footer__academy
+  &__academy {
+
+    svg{
+      width: rem(34);
+      height: rem(34);
+    }
+  }
+}
+
+.container {
+}
