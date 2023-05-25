@@ -3,9 +3,6 @@
   padding-bottom: rem(73);
   background: url("../img/card/zigzag-black.png") bottom repeat-x;
 
-  // .best-good__container
-  &__container {}
-
   // .best-good__body
   &__body{
     position: relative;
@@ -72,10 +69,6 @@
       grid-template-rows: auto;
       row-gap: rem(25);
     }
-  }
-
-  // .best-good__description
-  &__description {
   }
 
   // .best-good__image
@@ -199,9 +192,5 @@
     color: $mainDarkColor;
     text-align: center;
     margin-bottom: rem(30);
-  }
-
-  // .good-order__button
-  &__button {
   }
 }

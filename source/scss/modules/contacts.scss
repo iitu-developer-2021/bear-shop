@@ -9,14 +9,9 @@ div.gm-bundled-control div.gmnoprint {
   display: none !important;
 }
 
-
 .contacts {
   @include adaptiveValue("padding-top", 70, 38, 0);
   @include adaptiveValue("padding-bottom", 105, 39, 0);
-
-  // .contacts__container
-  &__container {
-  }
 
   // .contacts__body
   &__body {
@@ -189,3 +184,4 @@ div.gm-bundled-control div.gmnoprint {
     }
   }
 }
+

@@ -4,10 +4,6 @@
   @include adaptiveValue("padding-top", 56, 20, 0);
   @include adaptiveValue("padding-bottom", 56, 20, 0);
 
-  // .about__container
-  &__container {
-  }
-
   &__body{
     @include adaptiveValue("padding-left", 173, 80, 0, 1150, 900);
 
